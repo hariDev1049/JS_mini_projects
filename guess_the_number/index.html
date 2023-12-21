@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+</head>
+<body style="display: flex;  align-items: center; height: 100vh;flex-direction: column; background-color: #212121; color: white">
+    <h2>Guess the Number</h2><br/>
+    <div class="container" style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+        <div id="digi" style="background-color: orangered; padding: 5px; justify-content: center;"></div>
+
+        <h3>Enter a number between 1 to 100</h3>
+        <form class="form" style="display: flex; align-items: center; justify-content: center;">
+            <input type="text" id="input" placeholder="Enter a number" style="padding: 10px; margin: 10px;"/><br/>
+            <input type="button" id="subt" value="Guess the number" style="padding: 10px; margin: 10px;"/>
+        </form>
+        <div id="result" style="padding: 10px; margin: 10px; display: none;"></div>
+        <div id="previous"style="padding: 10px; margin: 10px;">Previous guesses : <span id="prev"></span></div>
+        <div id="chance" style="padding: 10px; margin: 10px;">
+            Available chances : <span id="chanceNum">5</span>
+        </div>
+    </div>
+    <script src="test.js"></script>
+</body>
+</html>
