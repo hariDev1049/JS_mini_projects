@@ -78,11 +78,13 @@ function deleteTodo(){
 function editTodo(){
     editNodes.forEach((node) => {
         node.addEventListener("click", (e)=>{
+            addTodoButton.value = 'Update Todo';
             let editTodo = node.parentNode.firstElementChild
             input.value = editTodo.innerHTML
             delTodo(node)
         },false)
     })
+    addTodoButton.value = 'Add Todo';
 }
 
 function delTodo(node){
