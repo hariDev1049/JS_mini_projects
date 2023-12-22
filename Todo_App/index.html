@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+  </head>
+  <style>
+    body {
+      background-color: #000000;
+      color: aliceblue;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+      /* background-color: #313131; */
+    }
+
+    .input {
+      width: 80%;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 15px;
+      font-size: x-large;
+    }
+    .input:hover {
+      border: 2px solid greenyellow;
+    }
+
+    .button {
+      width: 20%;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 15px;
+      font-size: medium;
+      font-weight: 400;
+    }
+    .button:hover {
+      background-color: greenyellow;
+    }
+    .check {
+      order: 2;
+    }
+    .todo {
+      background-color: greenyellow;
+      padding: 20px;
+      margin: 10px;
+      width: 100%;
+      border-radius: 15px;
+      color: #000000;
+    }
+    .input-add {
+      display: flex;
+      width: 100%;
+    }
+    .new_todo {
+      display: flex;
+      width: 100%;
+    }
+    .edit{
+        background-color:#919191;
+    }
+
+    .delete{
+        background-color: #919191;
+    }
+    .delete:hover{
+        background-color: red;
+    }
+
+  </style>
+  <body>
+    <h2>My Todo App</h2>
+    <div id="container" class="container">
+      <div id="input-add" class="input-add">
+        <input type="text" class="input" placeholder="Enter your Todo here..." id="input"/>
+        <input type="button" class="button" value="Add Todo" id="add"/>
+      </div>
+      <div id="new_todo" class="new_todo">
+        <!-- <input type="checkbox" class="check" aria-label="completed" /><br /> -->
+        <div class="todo">Prepare a JS project</div>
+        <input type="button" class="button edit" value="Edit Todo" id="edit"/>
+        <input type="button" class="button delete" value="Delete Todo" id="delete"/>
+        <!-- <input type="checkbox" class="checkbox" id="checked" aria-label="Todo"/> -->
+      </div>
+      <div id="new_todo" class="new_todo">
+        <!-- <input type="checkbox" class="check" aria-label="completed" /><br /> -->
+        <div class="todo">Sleep well..!</div>
+        <input type="button" class="button edit" value="Edit Todo" id="edit"/>
+        <input type="button" class="button delete" value="Delete Todo" id="delete" />
+      </div>
+    </div>
+    <script src="test.js"></script>
+  </body>
+</html>
