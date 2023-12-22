@@ -5,30 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
 </head>
-<body style="background-color: #414141; color: aliceblue;  display: flex;  flex-direction:column; justify-content: center; align-items: center; height: 100vh;">
-    <div id="main_container" style="background-color: #313131; width: 400px; height: 665px; border-radius: 4%; padding: 20px; margin: 4px; text-align: center; color: aliceblue;">
+<style>
+    body{
+        background-color: #414141;
+        color: aliceblue;  
+        display: flex;  
+        flex-direction:column; 
+        justify-content: center; 
+        align-items: center; 
+        height: 100vh;
+    }
+
+    .main_container{
+        background-color: #313131; 
+        width: 400px; 
+        height: 665px; 
+        border-radius: 4%; 
+        padding: 20px; 
+        margin: 4px; 
+        text-align: center; 
+        color: aliceblue;
+    }
+
+    .result{
+        background-color: #212121;
+        color: azure; 
+        border-radius: 5%; 
+        padding: 10px; 
+        height: 70px; 
+        font-size: xx-large;
+    }
+    .input{
+        height: 470px; 
+        border-radius: 5%; 
+        background-color: #212121; 
+        margin-top: 20px;
+        padding: 10px; 
+        display: grid; 
+        grid-template-columns: repeat(4,1fr); 
+        gap: 13px;
+    }
+
+    .button{
+        padding: 10px;
+        border-radius: 15%; 
+        background-color: #616161;
+        font-size: large;
+        color: aliceblue;
+    }
+    .button:hover{
+        background-color: whitesmoke;
+        border: 3px solid yellowgreen;
+        color: #212121;
+    }
+
+</style>
+<body>
+    <div id="main_container" class="main_container">
         <h3>CALCULATOR</h3>
-        <div class="result" id="result" style="background-color: #212121;color: antiquewhite; border-radius: 5%; padding: 10px; height: 70px; font-size: xx-large; "></div>
-        <div class="input" id="input" style="height: 470px; border-radius: 5%; background-color: #212121; margin-top: 20px;padding: 10px; display: grid; grid-template-columns: repeat(4,1fr); gap: 13px;">
-            <input type="button" value="7" style="padding: 10px;border-radius: 15%; background-color: #616161;" onmouseover="this.style.border='3px solid orangered'" onmouseout="this.style.border = 'none'"/>
-            <input type="button" value="8" style="padding: 10px;border-radius: 15%; background-color: #616161;" onmouseover="this.style.border='3px solid orangered'" onmouseout="this.style.border = 'none'"/>
-            <input type="button" value="9" style="padding: 10px;border-radius: 15%; background-color: #616161;" onmouseover="this.style.border='3px solid orangered'" onmouseout="this.style.border = 'none'"/>
-            <input type="button" value="+" style="padding: 10px;border-radius: 15%; background-color: #616161;" onmouseover="this.style.border='3px solid orangered'" onmouseout="this.style.border = 'none'"/>
-            <input type="button" value="4" style="padding: 10px;border-radius: 15%; background-color: #616161;" onmouseover="this.style.border='3px solid orangered'" onmouseout="this.style.border = 'none'"/>
-            <input type="button" value="5" style="padding: 10px;border-radius: 15%; background-color: #616161;" onmouseover="this.style.border='3px solid orangered'" onmouseout="this.style.border = 'none'"/>
-            <input type="button" value="6" style="padding: 10px;border-radius: 15%; background-color: #616161;" onmouseover="this.style.border='3px solid orangered'" onmouseout="this.style.border = 'none'"/>
-            <input type="button" value="-" style="padding: 10px;border-radius: 15%; background-color: #616161;" onmouseover="this.style.border='3px solid orangered'" onmouseout="this.style.border = 'none'"/>
-            <input type="button" value="1" style="padding: 10px;border-radius: 15%; background-color: #616161;" onmouseover="this.style.border='3px solid orangered'" onmouseout="this.style.border = 'none'"/>
-            <input type="button" value="2" style="padding: 10px;border-radius: 15%; background-color: #616161;" onmouseover="this.style.border='3px solid orangered'" onmouseout="this.style.border = 'none'"/>
-            <input type="button" value="3" style="padding: 10px;border-radius: 15%; background-color: #616161;" onmouseover="this.style.border='3px solid orangered'" onmouseout="this.style.border = 'none'"/>
-            <input type="button" value="*" style="padding: 10px;border-radius: 15%; background-color: #616161;" onmouseover="this.style.border='3px solid orangered'" onmouseout="this.style.border = 'none'"/>
-            <input type="button" value="C" style="padding: 10px;border-radius: 15%; background-color: #616161;" onmouseover="this.style.border='3px solid orangered'" onmouseout="this.style.border = 'none'"/>
-            <input type="button" value="0" style="padding: 10px;border-radius: 15%; background-color: #616161;" onmouseover="this.style.border='3px solid orangered'" onmouseout="this.style.border = 'none'"/>
-            <input type="button" value="=" style="padding: 10px;border-radius: 15%; background-color: #616161;" onmouseover="this.style.border='3px solid orangered'" onmouseout="this.style.border = 'none'"/>
-            <input type="button" value="/" style="padding: 10px;border-radius: 15%; background-color: #616161;" onmouseover="this.style.border='3px solid orangered'" onmouseout="this.style.border = 'none'"/>
-            <input type="button" value=">" style="padding: 10px;border-radius: 15%; background-color: #616161;" onmouseover="this.style.border='3px solid orangered'" onmouseout="this.style.border = 'none'"/>
+        <div class="result" id="result"></div>
+        <div class="input" id="input">
+            <input type="button" value="7" class="button"/>
+            <input type="button" value="8" class="button"/>
+            <input type="button" value="9" class="button"/>
+            <input type="button" value="+" class="button"/>
+            <input type="button" value="4" class="button"/>
+            <input type="button" value="5" class="button"/>
+            <input type="button" value="6" class="button"/>
+            <input type="button" value="-" class="button"/>
+            <input type="button" value="1" class="button"/>
+            <input type="button" value="2" class="button"/>
+            <input type="button" value="3" class="button"/>
+            <input type="button" value="*" class="button"/>
+            <input type="button" value="C" class="button"/>
+            <input type="button" value="0" class="button"/>
+            <input type="button" value="=" class="button"/>
+            <input type="button" value="/" class="button"/>
+            <input type="button" value=">" class="button"/>
         </div>
     </div>
     <script src="test.js"></script>
-</body>
+</body> 
 </html>
