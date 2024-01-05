@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth_System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header and Navigation -->
+
+    <header class="header">
+        <nav class="nav">
+            <div><h3>Logo</h3></div>
+            <div class="nav_button">
+                <button type="submit" class="login" id="login">Login</button>
+                <button type="submit" class="register" id="register">Register</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Login and Register Form -->
+    <div class="main_container">
+       <div class="card_container" id="log_card">
+        <h2>Login </h2>
+        <form action="" class="login_card" id="login_form">
+            <input type="text" placeholder="Enter username.." class="name_input">
+            <input type="password" placeholder="Enter password.." class="password_input">
+            <button type="submit">Login</button>
+            <p>Forgot password? <br>New user? Register</p>
+            <div id="error"></div>
+        </form>
+       </div> 
+       <div class="card_container" id="reg_card"> 
+        <h2>Register user</h2>
+        <form action="" class="register_card" id="register_form">
+            <input type="text" name="" id="username" placeholder="Enter username.." class="name_input">
+            <input type="email" placeholder="Enter email.." class="email_input" id="useremail">
+            <input type="password" placeholder="Enter password.." class="password_input" id="userpassword">
+            <button type="submit">Register</button>
+            <p>Already have an account? Login</p>
+            <span id="error"></span>
+        </form>
+       </div>
+    </div>
+<script src="script.js"></script>    
+</body>
+</html>

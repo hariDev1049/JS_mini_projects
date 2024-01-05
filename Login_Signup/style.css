@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* filter: blur(4px); */
+}
+
+body{
+    background-color: #001220;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 100vh;
+    aspect-ratio: 960/540;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url('/Auth_System/images/bg_auth.svg');
+    /* filter: blur(5px); */
+}
+
+/* Nav Bar */
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    height: 40px;
+}
+
+.nav h3{
+    color: aliceblue;
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nav h3:hover{
+    color: #FBAE3C;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.nav_button{
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav_button button{
+    padding: 13px 30px;
+    border-radius: 20px;
+    border: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: aliceblue;
+}
+
+
+.login:hover, .register:hover{
+    background-color: #FBAE3C;
+    transition: all 0.4s ease 0s;
+}
+
+
+/* Hero Section */
+
+.main_container{
+    height: calc(100% - 140px);
+    padding: 30px 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Login and Register user card */
+
+.card_container{
+    width: 400px;
+    height: 400px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 30px;
+    background: url('/Auth_System/images/card.svg');
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: #FBAE3C;
+}
+
+.email_input , .password_input, .name_input, .card_container button{
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/* .email_input:hover, .password_input:hover, .name_input:hover{
+    border: 2px solid #FBAE3C;
+    transition: all 0.4s ease-in-out;
+} */
+
+
+.card_container button{
+    margin-top: 30px;
+}
+
+.card_container h2{
+    padding: 10px 20px;
+    font-size: 24px;
+    color: aliceblue;
+}
+
+.card_container p{
+    color: aliceblue;
+    justify-content: flex-end;
+}
+
+.card_container h2:hover{
+    color: #FBAE3C;
+    transition: all 0.4s ease-in-out;
+}
+
+.login_card, .register_card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login_card button:hover, .register_card button:hover{
+    background-color: #FBAE3C;
+    border: 2px solid #001220;
+    transition: all 0.3s ease-in-out;
+    width: 120%;
+}
+
+
